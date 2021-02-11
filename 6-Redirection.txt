@@ -1,1 +1,105 @@
+# Concepts addressed:prompt, shell, directory
 
+~/command-line-5-8-tliapis$ ls -l /usr/bin > ls-output.txt
+~/command-line-5-8-tliapis$ ls -l ls-output.txt
+-rw-r--r-- 1 runner runner 93906 Feb 11 20:42 ls-output.txt
+~/command-line-5-8-tliapis$ less ls-output.txt
+bash: less: command not found
+~/command-line-5-8-tliapis$ ls -l /bin/usr > ls-output.txt
+ls: cannot access '/bin/usr': No such file or directory
+~/command-line-5-8-tliapis$ ls -l ls-output.txt
+-rw-r--r-- 1 runner runner 0 Feb 11 20:44 ls-output.txt
+~/command-line-5-8-tliapis$ ls-output.txt
+bash: ls-output.txt: command not found
+~/command-line-5-8-tliapis$ > ls-output.txt 
+~/command-line-5-8-tliapis$ ls -l /usr/bin >> ls-output.txt
+~/command-line-5-8-tliapis$ ls -l /usr/bin >> ls-output.txt
+~/command-line-5-8-tliapis$ ls -l /usr/bin >> ls-output.txt
+~/command-line-5-8-tliapis$ ls -l /usr/bin >> ls-output.txt
+~/command-line-5-8-tliapis$ ls -l ls-output.txt
+-rw-r--r-- 1 runner runner 375624 Feb 11 20:47 ls-output.txt
+~/command-line-5-8-tliapis$ ls -l /bin/usr 2> ls-error.txt
+~/command-line-5-8-tliapis$ ls -l /bin/usr > ls-output.txt 2>&1
+~/command-line-5-8-tliapis$ ls -l /bin/usr &> ls-output.txt
+~/command-line-5-8-tliapis$ ls -l /bin/usr &>> ls-output.txt
+~/command-line-5-8-tliapis$ ls -l /bin/usr 2> /dev/null
+~/command-line-5-8-tliapis$ catls-output.txt
+bash: catls-output.txt: command not found
+~/command-line-5-8-tliapis$ cat ls-output.txt
+ls: cannot access '/bin/usr': No such file or directory
+ls: cannot access '/bin/usr': No such file or directory
+~/command-line-5-8-tliapis$ cat
+The quick brown fox jumped over the lazy dog.
+The quick brown fox jumped over the lazy dog.
+exit
+exit
+^C
+~/command-line-5-8-tliapis$ cat
+~/command-line-5-8-tliapis$ cat > lazy_dog.txt
+The quick brown fox jumped over the lazy dog.
+~/command-line-5-8-tliapis$ cat lazy_dog.txt
+The quick brown fox jumped over the lazy dog.
+~/command-line-5-8-tliapis$ cat < lazy_dog.txt
+The quick brown fox jumped over the lazy dog.
+~/command-line-5-8-tliapis$ ls -l /usr/bin | less
+bash: less: command not found
+~/command-line-5-8-tliapis$ ls /bin /usr/bin | sort | less
+bash: less: command not found
+~/command-line-5-8-tliapis$ ls /bin /usr/bin | sort | uniq | less
+bash: less: command not found
+~/command-line-5-8-tliapis$ ls /bin /usr/bin | sort | uniq -d | less
+bash: less: command not found
+~/command-line-5-8-tliapis$ wc ls-output.txt
+  2  18 112 ls-output.txt
+~/command-line-5-8-tliapis$ ls /bin /usr/bin | sort | uniq | wc -l
+1536
+~/command-line-5-8-tliapis$ ls /bin /usr/bin | sort | uniq | grep zip
+bunzip2
+bzip2
+bzip2recover
+funzip
+gpg-zip
+gunzip
+gzip
+preunzip
+prezip
+prezip-bin
+unzip
+unzipsfx
+zip
+zipcloak
+zipdetails
+zipgrep
+zipinfo
+zipnote
+zipsplit
+~/command-line-5-8-tliapis$ head -n 5 ls-output.txt
+ls: cannot access '/bin/usr': No such file or directory
+ls: cannot access '/bin/usr': No such file or directory
+~/command-line-5-8-tliapis$ tail -n 5 ls-output.txt
+ls: cannot access '/bin/usr': No such file or directory
+ls: cannot access '/bin/usr': No such file or directory
+~/command-line-5-8-tliapis$ ls /usr/bin | tail -n 5
+zipdetails
+zipgrep
+zipinfo
+zipnote
+zipsplit
+~/command-line-5-8-tliapis$ tail -f /var/log/messages
+tail: cannot open '/var/log/messages' for reading: No such file or directory
+tail: no files remaining
+~/command-line-5-8-tliapis$ ls /usr/bin | tee ls.txt | grep zip
+funzip
+gpg-zip
+preunzip
+prezip
+prezip-bin
+unzip
+unzipsfx
+zip
+zipcloak
+zipdetails
+zipgrep
+zipinfo
+zipnote
+zipsplit
