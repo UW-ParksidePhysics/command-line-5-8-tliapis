@@ -1,1 +1,31 @@
+#concepts addressed (prompt, shell, script)
 
+~/command-line-5-8-WyattGracz$ ls
+5-WorkingWithCommands.txt  7-SeeingTheWorldAsTheShellSeesIt.txt  Photos
+6-Redirection.txt      8-AdvancedKeyboardTricks.txt      README.md
+~/command-line-5-8-WyattGracz$ ls ls-output.txt
+ls: cannot access 'ls-output.txt': No such file or directory
+~/command-line-5-8-WyattGracz$ ls Documents
+ls: cannot access 'Documents': No such file or directory
+~/command-line-5-8-WyattGracz$ history | less
+bash: less: command not found
+~/command-line-5-8-WyattGracz$ history | grep /usr/bin
+   30  file $(ls -d /usr/bin/* | grep zip)
+   56  history | grep /usr/bin
+~/command-line-5-8-WyattGracz$ !88
+bash: !88: event not found
+~/command-line-5-8-WyattGracz$ file $(ls -d /usr/bin/* | grep zip)
+/usr/bin/funzip:     ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=7aa1524b9c858c29db1dba7fa04ae27cdb6c5de4, stripped
+/usr/bin/gpg-zip:    POSIX shell script, ASCII text executable
+/usr/bin/preunzip:   POSIX shell script, ASCII text executable
+/usr/bin/prezip:     POSIX shell script, ASCII text executable
+/usr/bin/prezip-bin: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=f8e18f9ebb7d911b28c1f11d6db9040819073348, stripped
+/usr/bin/unzip:      ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=ac1eb2744561bfb2319b99ece51815b5caab0dfd, stripped
+/usr/bin/unzipsfx:   ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=306a9fb0ff719f3172c3050e15c9fdd20872b50a, stripped
+/usr/bin/zip:        ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=c828586e6e7cf929500a5b9c04faece9eceed5cc, stripped
+/usr/bin/zipcloak:   ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=6675095584351a4d9e63370ceb1dcce0232c6140, stripped
+/usr/bin/zipdetails: Perl script text executable
+/usr/bin/zipgrep:    POSIX shell script, ASCII text executable
+/usr/bin/zipinfo:    ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=ac1eb2744561bfb2319b99ece51815b5caab0dfd, stripped
+/usr/bin/zipnote:    ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=9d9a7264805021adae207c5d13fb0ab43a6fb04e, stripped
+/usr/bin/zipsplit:   ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=80f65d65f35b6bb9d37e8074bfa1e01c4b7ce18e, stripped
