@@ -1,4 +1,4 @@
-# Concepts addressed:prompt, shell, directory
+# Concepts addressed:prompt, shell, directory, redirection
 
 ~/command-line-5-8-tliapis$ ls -l /usr/bin > ls-output.txt
 ~/command-line-5-8-tliapis$ ls -l ls-output.txt
